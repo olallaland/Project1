@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人主页</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/Profile.css">
+	<link rel="stylesheet" href="./css/outerBox.css">
+	<link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+<div id="SignInBox">
+	<table class="box">
+		<tr>
+			<td>欢迎登录</td>
+			<td><input type="button" value="×" class="close" onClick="closeBox()"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="signForm">
+				<form method="post">
+					用户名*：<input type="text" id="username" name="name"  placeholder="请输入您的用户名" /><span id="alert1"></span><br/>
+					密码*：<input type="password" id="password" name="pwd1" onclick="reset1()" placeholder="请输入您的密码" /><span id="alert2"></span><br/>
+					<button type="button" id="signIn" onclick="verify()" onblur="reset1()" class="btn">登录</button>
+					<button type="button" id="cancel" onClick="closeBox()" class="btn">取消</button>
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="registerBox">
+	<table class="box">
+		<tr>
+			<td>欢迎注册</td>
+			<td><input type="button" value="×" class="close" onClick="closeBox2()"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="registerForm">
+				<form method="post">
+					昵称*：<input type="text" id="userName2" name="name" value="" placeholder="如：admin123" onblur="chkvalue(this)"><span id="alert2-1"></span><br>
+					密码*：<input type="password" id="pwd1" name="pwd1" value="" placeholder="密码：不少于六位" onblur="checkpwd1(this)"><span id="alert2-2"></span><br>
+					确认密码*：<input type="password" id="pwd2" name="pwd2" value="" placeholder="确认密码" onblur="checkpwd2(this)" onkeyup="chkpwdVal()"><span id="alert3"></span><br>
+					邮箱*：<input type="email" name="email" id="email" value="" placeholder="someone@example.com" onblur="chkemail(this)"><span id="alert4"></span><br>
+					电话：<input type="text" name="tel" id="tel" value="" placeholder="电话"><br>
+					地址：<input type="text" name="address" id="addr" placeholder="地址" /><br>
+					<input type="button" id="submit" value="注册" onclick="registerla()" class="btn" disabled/>
+					<input type="button" value="取消" onclick="closeBox2()" class="btn" />
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div id="recharge">
+	<table class="rechargeBox">
+		<tr>
+			<td>充值：</td>
+			<td id="close"><input type="button" value="×" class="close" onClick="closeRecharge()"></td>
+		</tr>
+		<tr class="mainBox">
+			<td colspan="2">
+				充值方式：
+				<input type="radio" name="payWay" checked><img src="./images/icons/zhifubao.png">
+				<input type="radio" name="payWay"><img src="./images/icons/weixin.png">
+				<input type="radio" name="payWay"><img src="./images/icons/onlinePay.png">
+				<br/>
+				充值金额：
+				<input type="radio" name="money" id="enterM" value=""><input type="text" name="enter" id="sum" placeholder="输入整数金额"/>
+				<input type="radio" name="money" value="5"/>500
+				<input type="radio" name="money" value="10"/>1000
+				<input type="radio" name="money" value="20" checked/>2000
+				<input type="radio" name="money" value="50"/>5000
+				<input type="radio" name="money" value="100"/>10000
+				<br/>
+				<button type="button" onclick="rechargeBtn()">充值</button>
+				<button type="button" onclick="closeRecharge()">取消</button>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="body">
+	<header id="beforeLog">
+		<p class="welcome">欢迎来到 <span>Art Store</span>   <a href = "javascript:void(0);" onclick ="signIn()">登录</a>或<a href = "javascript:void(0);" onclick ="register()">注册</a></p>
+		<ul class="nav-up">
+			<li><a href = "javascript:void(0);" onclick ="signIn()"><img src="./images/icons/user.png">未登录</a></li>
+			<li><a href="ShoppingCart.html"><img src="./images/icons/shopping-cart.png">购物车</a></li>
+		</ul>
+	</header>
+	<header id="afterLog">
+		<p class="welcome">欢迎来到 <span>Art Store</span></p>
+		<ul class="nav-up">
+			<li><a href="Profile.html"><img src="./images/icons/account-filling.png"> ollaland</a></li>
+			<li><a href="ShoppingCart.html"><img src="./images/icons/shopping-cart.png">购物车</a></li>
+			<li><a href = "javascript:void(0);" onclick ="logOut()"><img src="./images/icons/logout.png">登出</a></li>
+		</ul>
+	</header>
+	<section class="subhead">
+		<h1>Art Store</h1>
+		<div class="searchBox">
+			<input type="text" name="search" id="searchKey" placeholder="请输入关键字" />
+			<button type="button" onclick="searchChoose()"><a href="Search.html" id="a"><img src="./images/icons/search.png"></a></button>
+		</div>
+	</section>
+	<div class="nav-down">
+		<ul>
+			<li><a href="Homepage.html">首页</a></li>
+			<li><a href="Search.html">搜索</a></li>
+			<li><a href="productDetail.html" active>详情</a></li>
+			<li><a href="#">发布艺术品</a></li>
+		</ul>
+	</div>
+	
+	<div class="personalInfo" id="afterLog1">
+		<img src="./images/works/square-small/017040.jpg">
+		<p>用户：olallaland</p>
+		<p>电话：18912365478</p>
+		<p>邮箱：17302010083@fudan.edu</p>
+		<p>地址：上海市杨浦区政通路280号</p>
+		<p>余额：666,666</p>
+		<button type="button" onclick="showRecharge()">充值</button>
+	</div>
+	<div class="personalInfo" id="beforeLog1">
+		<img src="./images/icons/unLog.jpg">
+		<p>用户：</p>
+		<p>电话：</p>
+		<p>邮箱：</p>
+		<p>地址：</p>
+		<p>余额：</p>
+		<button type="button" onclick="unLogAlert()">充值</button>
+	</div>
+	<main>
+		
+		<div class="myUpload" id="afterLog2">
+			<p>我上传的艺术品：</p>
+			<table class="upload">
+				<tr>
+					<td>上传时间：2017/01/02</td>
+					<td>作品名称：The Pink Peach Tree</td>
+					<td>作品作者：Van Gogh</td>
+					<td>作品描述：<em>The Pink Peach Tree</em> is part of Van Gogh's "Orchard of Flowers" series during Arles,
+						and is also a memorial to his deceased cousin, his teacher Anton Moff.</td>
+				</tr>
+				<tr>
+					<td>上传时间：2017/08/18</td>
+					<td>作品名称：The Last Judgment</td>
+					<td>作品作者：Michelangelo Buonarroti</td>
+					<td>作品描述：<em>The Last Judgment</em> is an oil painting by the painter Michelangelo Bonaroti created between 1536 and 1541.
+						The central theme of this mural is the drama of life.
+					
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="myUpload" id="beforeLog2">
+			<p>我上传的艺术品：</p>
+		</div>
+		<div class="myOrder" id="afterLog3">
+			<p>我购买的艺术品：</p>
+			<table class="order">
+				<tr>
+					<td>订单编号：20162526060</td>
+					<td>商品名称：Sunflowers</td>
+					<td>订单时间：2016/05/26</td>
+					<td>订单金额：$400</td>
+				</tr>
+				<tr>
+					<td>订单编号：20162526473</td>
+					<td>商品名称：Waterloo Bridge</td>
+					<td>订单时间：2016/05/26</td>
+					<td>订单金额：$119</td>
+				</tr>
+			</table>
+		</div>
+		<div class="myOrder" id="beforeLog3">
+			<p>我购买的艺术品：</p>
+		</div>
+		<div class="mySell" id="afterLog4">
+			<p>我卖出的艺术品：</p>
+			<table class="sold">
+				<tr>
+					<td>订单编号：201606060150</td>
+					<td>商品名称：The Pink Peach Tree</td>
+					<td>订单时间：2017/06/06</td>
+					<td>订单金额：$150</td>
+				</tr>
+			</table>
+		</div>
+		<div class="mySell" id="beforeLog4">
+			<p>我卖出的艺术品：</p>
+		</div>
+	</main>
+	<footer>
+		<div class="copyright">
+			<p>Copyright © 2018 Art Store. All Rights Reserved.</p>
+		</div>
+	</footer>
+</div>
+<script>
+    function searchChoose(){
+        if(document.getElementById("searchKey").value == ""){
+            document.getElementById('a').setAttribute("href", "SearchNothing.html");
+        }
+        else{
+            document.getElementById('a').setAttribute("href", "Search.html");
+        }
+    }
+    function unLogAlert(){
+        alert("请先登录！");
+    }
+    function showRecharge(){
+        document.getElementById("body").style.opacity = "0.5";
+        document.getElementById("recharge").style.display = "block";
+    }
+    function rechargeBtn(){
+        if(document.getElementById("enterM").checked == true && document.getElementById("sum").value == ""){
+            alert("请输入金额！");
+        }
+        else{
+            alert("充值成功！");
+            closeRecharge();
+        }
+    }
+    function closeRecharge(){
+        document.getElementById("recharge").style.display = "none";
+        document.getElementById("body").style.opacity = "1";
+    }
+</script>
+<script type="text/javascript" src="./js/SignIn.js"></script>
+<script type="text/javascript" src="./js/Register.js"></script>
+</body>
+</html>

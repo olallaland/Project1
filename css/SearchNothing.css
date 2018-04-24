@@ -1,0 +1,102 @@
+body{
+    font-family: Arial;
+}
+header{
+    width: 100%;
+    padding: 10px 0;
+    background-color: #000;
+    color: white;
+}
+.welcome{
+    margin: 0 0 0 100px;
+}
+.welcome, ul, li{
+    display: inline;
+}
+span{
+    font-family: STLiti;
+    font-size: 20px;
+}
+.nav-up{
+    list-style-type: none;
+    position: absolute;
+    right: 100px;
+}
+a:link{
+    color: white;
+    padding: 0.7em;
+    text-decoration:none;
+}
+header a:visited{
+    color: white;
+}
+header a:hover {
+    padding: 0.7em;
+    color: #696969;
+    background-color: #D3D3D3;
+}
+.subhead{
+    display: inline;
+}
+h1{
+    font-family: 'Bookman Old Style', serif;
+    font-size: 40px;
+    display: inline;
+    margin: 0.5em 1em;
+    float: left;
+}
+.searchBox{
+    display: inline;
+    float: right;
+    margin: 2em 3em;
+}
+input[name=search]{
+    width: 12em;
+    height: 1.6em;
+}
+.nav-down{
+    padding: 1.1em 0 0 0;
+    border: solid 1px #BEBEBE;
+    margin: 90px 0 0 0;
+    height: 2.5em;
+    background-color: #D3D3D3;
+    color: #000;
+}
+.nav-down a:link{
+    color: #000;
+    padding: 1.1em 4em;
+    text-decoration: none;
+}
+.nav-down .active2:visited{
+    color: #000;
+    padding: 1.2em 4em;
+    background-color: #fff;
+}
+.nav-down .active1:visited{
+    color: #00868B;
+    padding: 1.2em 4em;
+    background-color: #fff;
+}
+.nav-down a:hover{
+    padding: 1.2em 4em;
+    background-color: #fff;
+}
+.nav-down a:active{
+    color:#0000FF;
+}
+main p{
+    font-size: 36px;
+    margin: 1em 0 1em 2em;
+}
+.sortBy{
+    float: right;
+}
+.nothing img{
+    border-radius: 50%;
+}
+.nothing{
+    font-family: Arial;
+    position: absolute;
+    top:400px;
+    left: 550px;
+}

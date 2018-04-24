@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Art Store</title>
+	<link rel="stylesheet" href="./css/reset.css" />
+	<link rel="stylesheet" href="css/Homepage.css" />
+	<link rel="stylesheet" href="./css/outerBox.css">
+	<link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+<div id="SignInBox">
+	<table class="box">
+		<tr>
+			<td>欢迎登录</td>
+			<td><input type="button" value="×" class="close" onClick="closeBox()"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="signForm">
+				<form method="post">
+					用户名*：<input type="text" id="username" name="name"  placeholder="请输入您的用户名" /><span id="alert1"></span><br/>
+					密码*：<input type="password" id="password" name="pwd1" onclick="reset1()" placeholder="请输入您的密码" /><span id="alert2"></span><br/>
+					<button type="button" id="signIn" onclick="verify()" onblur="reset1()" class="btn">登录</button>
+					<button type="button" id="cancel" onClick="closeBox()" class="btn">取消</button>
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="registerBox">
+	<table class="box">
+		<tr>
+			<td>欢迎注册</td>
+			<td><input type="button" value="×" class="close" onClick="closeBox2()"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="registerForm">
+				<form method="post">
+					昵称*：<input type="text" id="userName2" name="name" placeholder="如：admin123" onblur="chkvalue(this)"><span id="alert2-1"></span><br>
+					密码*：<input type="password" id="pwd1" name="pwd1" value="" placeholder="密码：不少于六位" onblur="checkpwd1(this)"><span id="alert2-2"></span><br>
+					确认密码*：<input type="password" id="pwd2" name="pwd2" value="" placeholder="确认密码" onblur="checkpwd2(this)" onkeyup="chkpwdVal()"><span id="alert3"></span><br>
+					邮箱*：<input type="email" name="email" id="email" value="" placeholder="someone@example.com" onblur="chkemail(this)"><span id="alert4"></span><br>
+					电话：<input type="text" name="tel" id="tel" value="" placeholder="电话"><br>
+					地址：<input type="text" name="address" id="addr" placeholder="地址" /><br>
+					<input type="button" id="submit" value="注册" onclick="registerla()" class="btn" disabled/>
+					<input type="button" value="取消" onclick="closeBox2()" class="btn" />
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="body">
+	<header>
+		<div id="headdd">
+			<div id="header_p">
+				<h1>Art Store</h1> where you will find <span>genius</span> and <span>extraordinary</span>
+			</div>
+			<nav id="beforeLog">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="Search.html">搜索</a></li>
+					<li><a href="productDetail.html">详情</a></li>
+					<li><a href = "javascript:void(0);" onclick ="signIn()">登录</a></li>
+					<li><a href = "javascript:void(0);" onclick ="register()">注册</a></li>
+				</ul>
+			</nav>
+			<nav id="afterLog">
+				<ul>
+					<li><a href="Profile.html"><img src="./images/icons/account-filling.png"> ollaland</a></li>
+					<li><a href="Homepage.html">首页</a></li>
+					<li><a href="Search.html">搜索</a></li>
+					<li><a href="productDetail.html">详情</a></li>
+					<li><a href = "javascript:void(0);" onclick ="logOut()"><img src="./images/icons/logout.png">登出</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div id="frame" >
+			<a id="a1" class="num">1</a>
+			<a id="a2" class="num">2</a>
+			<a id="a3" class="num">3</a>
+			<a id="a4" class="num">4</a>
+			<a id="a5" class="num">5</a>
+			<div id="photos" class="play">
+				<img src="./images/works/large/131010.jpg" >
+				<img src="./images/works/large/128010.jpg" >
+				<img src="./images/works/large/139020.jpg" >
+				<img src="./images/works/large/107010.jpg" >
+				<img src="./images/works/large/010020.jpg" >
+				<ul id="dis">
+					<li><h2>Grand Canal</h2>
+						<p class="author">Canaletto</p>
+						<p class="img-intro">Canaletto was at the peak of his powers when he created this view of the sun-drenched
+							palaces lining the Grand Canal and reflected in its shimmering water.
+						</p>
+						<button type="button" value="learn more" class="btn_more" ><a href="productDetail.html">learn more</a></button>
+					</li>
+					<li><h2>Morning Ride Along the Beach</h2>
+						<p class="author">Anton Mauve</p>
+						<p class="img-intro">Hague School painters were drawn to the harsh existence of poor fishermen, like those living in nearby Scheveningen.
+							Here Mauve depicted the other side of that fishing village: the sunny world of bourgeoisie.
+						</p>
+						<button type="button" value="learn more" class="btn_more" ><a href="productDetail.html">learn more</a></button>
+					</li>
+					<li><h2>Consulting the Oracle</h2>
+						<p class="author">John William Waterhouse</p>
+						<p class="img-intro">In this picture Waterhouse shows a group of seven young girls, sitting in a semicircle round a lamplit shrine,
+							waiting in excitement while the priestess interprets the words of the Oracle.
+						</p>
+						<button type="button" value="learn more" class="btn_more" ><a href="productDetail.html">learn more</a></button>
+					</li>
+					<li><h2>Madame de Pompadour</h2>
+						<p class="author">Francois Boucher</p>
+						<p class="img-intro">Jeanne Antoinette Poisson, otherwise known as Madame de Pompadour,
+							was the mistress of King Louis XV, as well as a prominent patron of Francois Boucher.
+						</p>
+						<button type="button" value="learn more" class="btn_more" ><a href="productDetail.html">learn more</a></button>
+					</li>
+					<li><h2>Burial at Ornans</h2>
+						<p class="author">Gustave Courbet</p>
+						<p class="img-intro"><em>The Burial</em>, one of Courbet's most important works,
+							records the funeral of his grandfather which he attended in September 1848.
+							People who attended the funeral were the models for the painting.
+						</p>
+						<button type="button" value="learn more" class="btn_more" ><a href="productDetail.html">learn more</a></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+	</header>
+	<main>
+		<section id="first">
+			<img class="small" src=".\images\works\square-medium\017040.jpg" />
+			<h2>Woman with a Parasol</h2>
+			<p class="img-intro">With Manet's assistance, Monet found lodging in suburban Argenteuil in late 1871,
+				a move that initiated one of the most fertile phases of his career.
+				Impressionism evolved in the late 1860s from a desire to create full–scale,
+				multi–figure depictions of ordinary people in casual outdoor situations.
+				At its purest, impressionism was attuned to landscape painting, a subject Monet favored.
+			</p>
+			<button type="button" class="btn_down" ><a href="productDetail.html">view details</a></button>
+		</section>
+		
+		<section id="second">
+			<img class="small" src=".\images\genres\square-medium\87.jpg" />
+			<h2>Girl with a Pearl Earring</h2>
+			<p class="img-intro"><em>Girl with a Pearl Earring</em> is one of Johannes Vermeer\'s masterworks and,
+				as the name implies, uses a pearl earring for a focal point. Today the painting is kept in the Mauritshuis gallery in The Hague.
+				It is sometimes referred to as "the Mona Lisa of the North" or "the Dutch Mona Lisa".
+				The Dutch 17th-century description of a head that was not meant to be a portrait.</p>
+			<button type="button" class="btn_down" ><a href="productDetail.html">view details</a></button>
+		</section>
+		<section id="third">
+			<img class="small" src=".\images\genres\square-medium\76.jpg" />
+			<h2>Woman and Child on the Seashore</h2>
+			<p class="img-intro">Inspired by ancient art he saw while in Rome, Picasso began painting heavy-set figures in a neoclassical mode.
+				In 1918, having married the Russian dancer Olga Koklova, Picasso was drawn to images of mothers with children.
+				Picasso began painting heavy-set figures in a neoclassical mode.
+				In 1918, having married the Russian dancer Olga Koklova, Picasso was drawn to images of mothers with children.
+			</p>
+			<button type="button" class="btn_down" ><a href="productDetail.html">view details</a></button>
+		</section>
+	</main>
+	<footer>
+		<div class="copyright">
+			<p>Copyright © 2018 Art Store. All Rights Reserved.</p>
+		</div>
+	</footer>
+</div>
+<script type="text/javascript" src="./js/SignIn.js"></script>
+<script type="text/javascript" src="./js/Register.js"></script>
+</body>
+</html>
+

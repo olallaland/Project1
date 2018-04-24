@@ -1,0 +1,205 @@
+body{
+    font-family: Arial;
+}
+header{
+    width: 100%;
+    padding: 10px 0;
+    background-color: #000;
+    color: white;
+}
+.welcome{
+    margin: 0 0 0 100px;
+}
+.welcome, ul, li{
+    display: inline;
+}
+span{
+    font-family: STLiti;
+    font-size: 20px;
+}
+.nav-up{
+    list-style-type: none;
+    position: absolute;
+    top: 10px;
+    right: 100px;
+}
+a:link{
+    color: white;
+    padding: 0.7em;
+    text-decoration:none;
+}
+header a:visited{
+    color: white;
+}
+header a:hover {
+    padding: 0.7em;
+    color: #696969;
+    background-color: #D3D3D3;
+}
+.subhead{
+    display: inline;
+}
+h1{
+    font-family: 'Bookman Old Style', serif;
+    font-size: 40px;
+    display: inline;
+    margin: 0.5em 1em;
+    float: left;
+}
+.searchBox{
+    display: inline;
+    float: right;
+    margin: 2em 3em;
+}
+input[name=search]{
+    width: 12em;
+    height: 1.6em;
+}
+.nav-down{
+    padding: 1.1em 0 0 0;
+    border: solid 1px #BEBEBE;
+    margin: 90px 0 0 0;
+    height: 2.5em;
+    background-color: #D3D3D3;
+    color: #000;
+}
+.nav-down a:link{
+    color: #000;
+    padding: 1.1em 4em;
+    text-decoration: none;
+}
+.nav-down .active2:visited{
+    color: #000;
+    padding: 1.2em 4em;
+    background-color: #fff;
+}
+.nav-down .active1:visited{
+    color: #00868B;
+    padding: 1.2em 4em;
+    background-color: #fff;
+}
+.nav-down a:hover{
+    padding: 1.2em 4em;
+    background-color: #fff;
+}
+#searchNothing{
+    display: none;
+}
+main p{
+    font-size: 36px;
+    margin: 1em 0 1em 2em;
+}
+.sortBy{
+    float: right;
+}
+.result{
+    margin: 2em 3em 1em 3em;
+    border-spacing: 50px 10px;
+}
+.result td{
+    border: solid 1px #BEBEBE;
+    position: relative;
+    width: 350px;
+    height: 300px;
+    padding: 2em;
+    background-color: #FFFAF0;
+}
+td a{
+    color: black;
+}
+.title{
+    font-size: 26px;
+    font-family: Consolas;
+    font-weight: bold;
+    width: 170px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+.title:hover{
+    white-space: normal;
+}
+.author{
+    font-family: STLiti;
+    font-size: 22px;
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+.price{
+    margin: 0.5em 0;
+    font-family: STLiti;
+    font-size: 24px;
+    font-weight: bold;
+}
+.price span{
+    font-family: Georgia, 'Bookman Old Style', serif;
+    font-weight: bold;
+    color: #F50057;
+}
+.img_button button{
+    margin: 1em 3em 0 3em;
+    border: solid 1px;
+    width: 80px;
+    height: 30px;
+    background-color: #87CEEB;
+    border: solid 2px rgba(190, 190, 190, 0.5);
+}
+.click:hover{
+    border: solid 2px #fff;
+}
+.intro{
+    font-family: "Times New Roman";
+    width: 350px;
+    height: 60px;
+    margin: 1em 0;
+}
+.pagelist{
+     color:black;
+     width:800px;
+     margin:1em auto 5em auto;
+     padding:6px 0px;
+     height:20px;
+ }
+.pagelist a{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+.pagelist a:link{
+    background-color: white;
+}
+.pagelist a:hover{
+    background-color: #dddddd;
+}
+ul{
+    list-style:none;
+}
+.pageinfo{
+    float: left;
+    color:#555;
+    border: 1px solid #ddd;
+    padding: 6px 16px;
+}
+.active3{
+    background:#a9d2ff;
+    display:block;
+    font-weight:bold;
+}
+.page{
+    border: none;
+    width: 30px;
+    text-align: center;
+}

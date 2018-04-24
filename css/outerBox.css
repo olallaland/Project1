@@ -1,0 +1,83 @@
+#afterLog, #afterLog1, #afterLog2, #afterLog3, #afterLog4{
+    display: none;
+}
+#SignInBox{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 35%;
+    z-index: 1001;
+}
+.box{
+    border-radius: 7px;
+    background-color: #FFFAF0;
+    width: 30%;
+    border: solid 1px #87CEFA;
+    position: static;
+    color: #000;
+    text-align: left;
+}
+.close{
+    background-color: red;
+    border: outset 2px #BEBEBE;
+    cursor: hand;
+    float: right;
+}
+.close:hover{
+    background-color: red;
+    border: inset 2px #fff;
+}
+.signForm {
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    background-color: #FFFAF0;
+}
+#registerBox{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 35%;
+    z-index: 1001;
+}
+td{
+    border: none;
+}
+.registerForm{
+    text-align: center;
+    height: 550px;
+    width: 100%;
+    background-color: #FFFAF0;
+}
+input[name=name], input[name=pwd1], input[name=pwd2], input[name=email], input[name=tel], input[name=address]{
+    width:150px;
+    height: 20px;
+    margin: 0 0 50px 0;
+    border-radius: 5px;
+    background-color: #FFFACD;
+}
+#alert1, #alert2, #alert2-1, #alert2-2, #alert3, #alert4{
+    font-family: "Times New Roman";
+    font-size: 12px;
+    color: red;
+}
+.btn{
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #87CEFA;
+    padding: 0.5em 0 0.5em 0;
+    margin: 0 1em;
+    width: 7em;
+    height: 2.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.btn:hover{
+    background-color: #FF4081;
+}

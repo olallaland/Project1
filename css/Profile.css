@@ -1,0 +1,194 @@
+body{
+    font-family: Arial;
+}
+header{
+    width: 100%;
+    padding: 10px 0;
+    background-color: #000;
+    color: white;
+}
+.welcome{
+    margin: 0 0 0 100px;
+}
+.welcome, ul, li{
+    display: inline;
+}
+span{
+    font-family: STLiti;
+    font-size: 20px;
+}
+.nav-up{
+    list-style-type: none;
+    position: absolute;
+    right: 100px;
+}
+a:link{
+    color: white;
+    padding: 0.7em;
+    text-decoration:none;
+}
+header a:visited{
+    color: white;
+}
+header a:hover {
+    padding: 0.7em;
+    color: #696969;
+    background-color: #D3D3D3;
+}
+.subhead{
+    display: inline;
+}
+h1{
+    font-family: 'Bookman Old Style', serif;
+    font-size: 40px;
+    display: inline;
+    margin: 0.5em 1em;
+    float: left;
+}
+.searchBox{
+    display: inline;
+    float: right;
+    margin: 2em 3em;
+}
+input[name=search]{
+    width: 12em;
+    height: 1.6em;
+}
+.nav-down{
+    padding: 1.1em 0 0 0;
+    border: solid 1px #BEBEBE;
+    margin: 90px 0 0 0;
+    height: 2.5em;
+    background-color: #D3D3D3;
+    color: #000;
+}
+.nav-down a:link{
+    color: #000;
+    padding: 1.1em 4em;
+    text-decoration: none;
+}
+.nav-down a:visited{
+    color: #000;
+    padding: 1.2em 4em;
+    background-color: #fff;
+
+}
+.nav-down a:hover{
+    padding: 1.2em 4em;
+    background-color: #fff;
+}
+.nav-down a:active{
+    color:#0000FF;
+}
+main{
+    margin: 2em 0 5em 25em;
+}
+.myUpload{
+    margin-bottom: 10px;
+    padding: 1em;
+    width: 90%;
+    height: 200px;
+    background-color: #FFFACD;
+    border: outset 1px #BEBEBE;
+}
+.myOrder{
+    margin-bottom: 10px;
+    padding: 1em;
+    width: 90%;
+    height: 200px;
+    background-color: #F6CBC6;
+    border: outset 1px #BEBEBE;
+}
+.mySell{
+    margin-bottom: 10px;
+    padding: 1em;
+    width: 90%;
+    height: 200px;
+    background-color: #87CEFA;
+    border: outset 1px #BEBEBE;
+}
+.personalInfo{
+    float: left;
+    background-color: #F0FFF0;
+    width: 200px;
+    height: auto;
+    margin: 2em;
+    padding: 1.8em;
+    line-height: 30px;
+    border: outset 2px #E0EEE0;
+}
+.personalInfo img{
+    border-radius:50%;
+    margin: 0 0 0 3.5em;
+    box-shadow: 0 0 8px 2px rgba(255, 0, 0, 0.5);
+}
+.personalInfo button{
+    float: right;
+    background-color: #76EEC6;
+    border: outset 2px rgba(190, 190, 190, 0.5);
+    width: 6em;
+    height: 2.5em;
+}
+.personalInfo button:hover{
+    border: inset 2px #fff;
+}
+.order, td, .upload, .sold{
+    border: solid 1px #000;
+    border-collapse: collapse;
+}
+.order, .upload, .sold{
+    width: 90%;
+    margin: 20px auto;
+}
+#recharge{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 29%;
+    z-index: 1001;
+}
+.rechargeBox{
+    width: 42%;
+    border-radius: 5px;
+    border: solid 1px #000;
+    background-color: #FFFAF0;
+}
+.mainBox{
+    line-height: 70px;
+    height: 280px;
+}
+#close{
+    width: 25px;
+}
+.rechargeBox img{
+    border: solid 1px #000;
+    border-radius: 7px;
+}
+.rechargeBox button{
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #87CEFA;
+    padding: 0.5em 0 0.5em 0;
+    margin: 0 8em;
+    width: 7em;
+    height: 2.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.rechargeBox button:hover {
+    background-color: #FF4081;
+}
+.close{
+    background-color: red;
+    border: outset 2px #BEBEBE;
+    cursor: hand;
+    float: right;
+}
+.close:hover{
+    background-color: red;
+    border: inset 2px #fff;
+}
